@@ -1,4 +1,5 @@
 import { NavigationBar } from "./NavigationBar";
+import { PromoBar } from "./PromoBar";
 import { Topnav } from "./TopNav";
 
 function Navbar() {
@@ -6,6 +7,7 @@ function Navbar() {
     <div>
       <Topnav />
       <NavigationBar />
+      <PromoBar />
     </div>
   );
 }
