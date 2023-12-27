@@ -12,6 +12,7 @@ export default function Home() {
           gap: "2",
           justifyContent: "center",
           height: "100vh",
+          border: "1px solid red",
         })}
       >
         Mini App to reproduce{" "}
