@@ -59,7 +59,7 @@ function NavigationBar() {
           display: "flex",
           alignItems: "center",
           height: "100%",
-          gap: "16px",
+          gap: "20px",
           cursor: "pointer",
         })}
       >
@@ -141,7 +141,7 @@ function NavigationBar() {
         <div
           className={css({
             display: "flex",
-            gap: "24px",
+            gap: "16px",
           })}
         >
           <div className={svgStyles}>

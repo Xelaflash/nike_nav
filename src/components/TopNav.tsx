@@ -4,6 +4,7 @@ const linkStyles = css({
   fontSize: "12px",
   fontWeight: "600",
   margin: "0 8px",
+  padding: "0 4px ",
   _hover: {
     color: "#757575",
   },
@@ -29,7 +30,7 @@ function Topnav() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: "8px",
+          gap: "24px",
         })}
       >
         <svg height="24px" width="24px" fill="#111" viewBox="0 0 26 32">

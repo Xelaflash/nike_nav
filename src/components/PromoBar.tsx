@@ -54,7 +54,8 @@ const PromoBar: React.FC<PromoBarProps> = ({ autoPlay = true, interval = 5000 })
           alignItems: "center",
           justifyContent: "space-between",
           // border: "1px solid red",
-          width: "780px",
+          width: "768px",
+          padding: "0 38px 0 36px",
         })}
       >
         <ChevronButton direction="left" onClick={() => paginate(-1)} />
@@ -63,11 +64,11 @@ const PromoBar: React.FC<PromoBarProps> = ({ autoPlay = true, interval = 5000 })
             key={page}
             className={css({
               position: "absolute",
-              left: "5%",
-              transform: "translateX(-5%)",
+              left: "10%",
+              transform: "translateX(-10%)",
               textAlign: "center",
               margin: "0 auto",
-              width: "700px",
+              width: "650px",
               // border: "1px solid green",
             })}
             initial={{ x: 600, opacity: 0 }}
