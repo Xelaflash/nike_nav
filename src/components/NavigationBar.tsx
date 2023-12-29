@@ -19,16 +19,23 @@ const svgStyles = css({
   },
 });
 
-function NavigationBar() {
+type NavigationBarProps = {
+  style?: React.CSSProperties;
+};
+
+function NavigationBar({ style }: NavigationBarProps) {
   return (
     <div
+      style={style}
       className={css({
+        zIndex: 2,
         backgroundColor: "white",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
         padding: "0 38px 0 36px",
         height: "60px",
+        width: "100%",
       })}
     >
       <svg
