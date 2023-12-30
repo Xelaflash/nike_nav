@@ -1,8 +1,36 @@
+import { useEffect, useRef, useState } from "react";
 import { css } from "../../styled-system/css";
+import { useMotionValueEvent, useScroll } from "framer-motion";
 
 function Header() {
+  const [isSticky, setSticky] = useState(false);
+  const [isOffset, setOffset] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latestScrollY) => {
+    const previous = scrollY.getPrevious();
+    if (latestScrollY > previous && latestScrollY > 190) {
+      setSticky(true);
+      setOffset(false);
+    } else if (latestScrollY < previous && latestScrollY < 190) {
+      setSticky(false);
+      setOffset(false);
+    } else if (!isSticky && latestScrollY < previous) {
+      setOffset(false);
+    } else if (isSticky && latestScrollY < previous && latestScrollY > 190) {
+      setOffset(true);
+    } else {
+      setOffset(false);
+    }
+  });
+
   return (
-    <>
+    <div
+      className={css({
+        display: "initial",
+      })}
+    >
       <div
         className={css({
           marginTop: "16px",
@@ -27,17 +55,27 @@ function Header() {
       </div>
       {/*  title + filter/sort */}
       <header
+        ref={headerRef}
+        id="header"
         className={css({
           padding: "0px 48px 15px",
-          background: "#fff",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
           marginBottom: "16px",
+          background: "#fff",
+          position: "sticky",
+          top: "0",
+          transform: isOffset && isSticky ? "translateY(60px)" : "translateY(0)",
+          transition: "transform .15s ease",
+          zIndex: 9,
         })}
       >
         <h1
           className={css({
+            transform: isSticky ? "scale(0.75)" : "scale(1)",
+            flex: "1 1 0%",
+            transformOrigin: "left center",
+            transition: "transform 200ms",
             fontSize: "24px",
             fontWeight: "bold",
             lineHeight: 1.3,
@@ -131,7 +169,7 @@ function Header() {
           </button>
         </nav>
       </header>
-    </>
+    </div>
   );
 }
 export { Header };

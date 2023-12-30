@@ -33,7 +33,7 @@ function NavigationBar({ style }: NavigationBarProps) {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "0 38px 0 36px",
+        padding: "0 48px",
         height: "60px",
         width: "100%",
       })}

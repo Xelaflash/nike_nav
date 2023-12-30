@@ -15,9 +15,9 @@ const ProductGrid: React.FC = () => {
     { id: 1, name: "Nike Dunk Low Retro", type: "Men's Shoes", color: "1 Color", price: 115, label: "Best Seller" },
     { id: 2, name: "Nike Dunk Low", type: "Men's Shoes", color: "1 Color", price: 115, label: "Just In" },
     { id: 3, name: "Nike Air Max 90", type: "Men's Shoes", color: "4 Colors", price: 130, label: "Best Seller" },
-    { id: 1, name: "Nike Dunk Low Retro", type: "Men's Shoes", color: "1 Color", price: 115, label: "Best Seller" },
-    { id: 2, name: "Nike Dunk Low", type: "Men's Shoes", color: "1 Color", price: 115, label: "Just In" },
-    { id: 3, name: "Nike Air Max 90", type: "Men's Shoes", color: "4 Colors", price: 130, label: "Best Seller" },
+    { id: 4, name: "Nike Dunk Low Retro", type: "Men's Shoes", color: "1 Color", price: 115, label: "Best Seller" },
+    { id: 5, name: "Nike Dunk Low", type: "Men's Shoes", color: "1 Color", price: 115, label: "Just In" },
+    { id: 6, name: "Nike Air Max 90", type: "Men's Shoes", color: "4 Colors", price: 130, label: "Best Seller" },
   ];
 
   return (
@@ -26,16 +26,10 @@ const ProductGrid: React.FC = () => {
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
         gap: "16px",
-        padding: "0 8px",
       })}
     >
       {products.map((product) => (
-        <div
-          key={product.id}
-          className={css({
-            padding: "0 8px",
-          })}
-        >
+        <div key={product.id}>
           <div className="card">
             <div
               className={css({

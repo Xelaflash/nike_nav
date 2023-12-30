@@ -30,14 +30,24 @@ function Navbar() {
   });
 
   return (
-    <div>
+    <div
+      className={css({
+        display: "initial",
+      })}
+    >
       <Topnav />
       <NavigationBar
         style={
           hidden
-            ? { transform: "translateY(-96px)", transition: "transform .35s ease" }
+            ? { transform: "translateY(-60px)", transition: "transform .15s ease", top: 0 }
             : isFixed
-              ? { position: "fixed", top: "-60px", transform: "translateY(60px)", transition: "transform .35s ease" }
+              ? {
+                  position: "fixed",
+                  top: "-60px",
+                  transform: "translateY(60px)",
+                  transition: "transform .15s ease",
+                  zIndex: 9,
+                }
               : {}
         }
       />
