@@ -1,8 +1,15 @@
+import { ProductGrid } from "@/components/ProductGrid";
 import { css } from "../../styled-system/css";
 
 export default function Home() {
   return (
-    <main>
+    <main
+      className={css({
+        maxWidth: "1920px",
+        padding: "0 48px",
+      })}
+    >
+      <ProductGrid />
       <div
         className={css({
           fontSize: "2xl",
@@ -11,8 +18,9 @@ export default function Home() {
           alignItems: "center",
           gap: "2",
           justifyContent: "center",
-          height: "100vh",
-          border: "1px solid red",
+          margin: "128px 0",
+          background: "#F6F6F6",
+          padding: "32px",
         })}
       >
         Mini App to reproduce{" "}
@@ -30,9 +38,9 @@ export default function Home() {
           {" "}
           nike.com
         </a>{" "}
-        navbar
+        navbar animations (not made responsive)
       </div>
-      {/* TODO: add viedo of effect here */}
+      {/* TODO: add video of effect here */}
     </main>
   );
 }
