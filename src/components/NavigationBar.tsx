@@ -45,6 +45,7 @@ function NavigationBar({ style }: NavigationBarProps) {
         height="24px"
         fill="none"
         className={css({
+          overflow: "hidden",
           display: "block",
           fill: "currentColor",
           height: "60px",

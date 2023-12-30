@@ -43,10 +43,10 @@ function Navbar() {
             : isFixed
               ? {
                   position: "fixed",
-                  top: "-60px",
-                  transform: "translateY(60px)",
+                  transform: "translateY(0)",
+                  top: "0",
                   transition: "transform .15s ease",
-                  zIndex: 9,
+                  zIndex: 10,
                 }
               : {}
         }
