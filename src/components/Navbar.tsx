@@ -16,8 +16,10 @@ function Navbar() {
   const [isFixed, setIsFixed] = useState(false);
   useMotionValueEvent(scrollY, "change", (latestScrollY) => {
     const previous = scrollY.getPrevious();
+
     if (latestScrollY > previous && latestScrollY > 34) {
       setHidden(true);
+      setIsFixed(false);
     } else if (latestScrollY < previous && latestScrollY > 34) {
       setIsFixed(true);
       setHidden(false);
