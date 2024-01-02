@@ -2,7 +2,9 @@
 
 This repository is a reproduction of Nike's navigation components, focusing on their seamless scroll animations.
 I made this repo for learning and practicing how to implement scroll animations in a real-world scenario.
+[Original Nike.com](https://www.nike.com/w/mens-lifestyle-shoes-13jrmznik1zy7ok)
 
+[Live Demo](https://nike-nav-demo-4mf6px7g6-xelatrash.vercel.app)
 
 ## Project Structure
 The project is structured as follows:
