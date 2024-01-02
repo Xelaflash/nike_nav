@@ -19,7 +19,7 @@ const offers = [
 // !!⚠️ Code is produced by ChatGpt, for the fun of it. I may or may not have written this myself. Actually I did refactor to animate it with framer motion and to use pandaCSS.
 
 const PromoBar: React.FC<PromoBarProps> = ({ autoPlay = true, interval = 5000 }) => {
-  const [[page, direction], setPage] = useState([0, 0]);
+  const [[page, direction], setPage] = useState<[number, number]>([0, 0]);
 
   const offerIndex = wrap(0, offers.length, page);
 

@@ -40,7 +40,6 @@ export default function Home() {
         </a>{" "}
         navbar animations (not made responsive)
       </div>
-      {/* TODO: add video of effect here */}
     </main>
   );
 }

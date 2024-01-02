@@ -12,8 +12,9 @@ import { css } from "../../styled-system/css";
 
 function Navbar() {
   const { scrollY } = useScroll();
-  const [hidden, setHidden] = useState(false);
-  const [isFixed, setIsFixed] = useState(false);
+  const [hidden, setHidden] = useState<boolean>(false);
+  const [isFixed, setIsFixed] = useState<boolean>(false);
+
   useMotionValueEvent(scrollY, "change", (latestScrollY) => {
     const previous = scrollY.getPrevious();
 

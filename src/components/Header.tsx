@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { css } from "../../styled-system/css";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 
 function Header() {
-  const [isSticky, setSticky] = useState(false);
-  const [isOffset, setOffset] = useState(false);
+  const [isSticky, setSticky] = useState<boolean>(false);
+  const [isOffset, setOffset] = useState<boolean>(false);
   const headerRef = useRef<HTMLElement>(null);
   const { scrollY } = useScroll();
 
